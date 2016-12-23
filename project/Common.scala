@@ -7,6 +7,7 @@ object Common {
   )
 
   val akkaHttpVersion = "10.0.0"
+  //  val akkaStreamVersion = "1.0-M3"
   val akkaStreamVersion = "2.4.14"
   val akkaVersion = "2.4.14"
   val reactiveRabbitVersion = "1.1.4"

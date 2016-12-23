@@ -38,6 +38,7 @@ lazy val app = (project in file("app"))
 lazy val producerLib = (project in file("producer")).
   settings(commonSettings: _*).
   settings(
+    mainClass in assembly := Some("com.demo.Boot"),
     assemblyJarName in assembly := "producer.jar",
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-actor" % akkaVersion,
@@ -58,6 +59,7 @@ lazy val producerLib = (project in file("producer")).
 lazy val consumerLib = (project in file("consumer")).
   settings(commonSettings: _*).
   settings(
+    mainClass in assembly := Some("com.demo.Boot"),
     assemblyJarName in assembly := "consumer.jar",
     libraryDependencies ++= Seq(
       "com.typesafe.akka" %% "akka-actor" % akkaVersion,
